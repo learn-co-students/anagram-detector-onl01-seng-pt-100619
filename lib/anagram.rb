@@ -3,39 +3,40 @@ class Anagram
   
 attr_accessor :word
 
-def initialize(word)
-  @word = word
-end 
+  def initialize(word)
+    @word = word
+  end 
 
-def match(anagram)
-#binding.pry
-matching_words = []
+  def match(anagram)
+  #binding.pry
+  matching_words = []
 
-#split word
-word_array = @word.split(//).sort
+  #split word
+  word_array = @word.split(//).sort
 
-#binding.pry
+  #binding.pry
 
-def split_anagram(array)
-#split anagram
-array.split("")
+      def split_anagram(array)
+        #split anagram
+        array.split("")
 
-#sort anagram also 
-array.collect do |x| x.sort
-end 
-array 
-end 
-#check to see if they are equal
-if word_array == anagram
+        #sort anagram also 
+        array.collect do |x| x.sort
+        end 
+      array 
+      end 
 
-#return all matches if true
+    #check to see if they are equal
+    if word_array == anagram
 
-else 
-#return an empty array if false 
-matching_words
+    #return all matches if true
 
-end 
-end
+    else 
+    #return an empty array if false 
+    matching_words
+
+    end 
+  end
 
 
 end
