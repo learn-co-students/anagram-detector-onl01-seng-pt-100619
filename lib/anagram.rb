@@ -46,16 +46,6 @@ arr_list
 end 
 end
 
-# #words.each do |word| #=>  iterate each word in words array. "word" variable will have value at a particular iteration
-#   key = word
-#   .split('') #=> splits word, if word is 'demo' on iteration then it will be: `['d', 'e', 'm', 'o']`
-#   .sort #=> sorts the splitted array, i.e. the array above will be: `['e', 'd', 'm', 'o']`
-#   .join #=> joins the array sorted in above operation, it will be: 'edmo'. Since this is last operation, it will be returned and saved in `key` variable
-#   if result.has_key?(key) #=> Check whether result(Hash) already has key: `edmo`, returns true if present
-#     result[key].push(word) #=> result['edmo'] will give an array value, which can push word in that array
-#   else #=> false when key is not present in result Hash.
-#     result[key] = [word] #=> then add key with an array such as: `result['edmo] = ['demo']`
-#   end
-# end
+#https://stackoverflow.com/questions/39869703/ruby-anagram-codes
 
 end
