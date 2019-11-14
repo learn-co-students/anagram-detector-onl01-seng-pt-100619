@@ -6,46 +6,47 @@ attr_accessor :word
 def initialize(word)
   @word = word
 end 
-#create method to split word
-def split_word 
-end 
-binding.pry
-def sort_anagram(anagram,index)
-  
-  anagram[index].split("").sort
-end 
 
-
-#create method to compare("match"} anagram and word which would be inside anagram_list?
 def match(arr)
-#binding.pry
-arr_list = []
+  binding.pry
+    arr.select do |word|
+    	@word.split('').sort == word.split('').sort
+    end
+    #.select => Returns a new array containing all elements of ary 
+    #           for which the given block returns a true value.
+    
+    # here, we are given an array of words.
+    # we have an instance variable with a word in it, lets pretend its 'cats'
+    
+    # and the array we're being passed in is ['acts', 'cast', 'hello']
+    
+    # this method needs to return the arr that's passed in, filtered down to only be the anagram matches.
+    
+    # so in this example, it should return ['acts', 'cast'] ("hello" should be filtered out)
+  end
+# def match(arr)
+# #empty array?
+# result = []
 
-#split word
-word_array = @word.split(//).sort
+# #split word
+# words = @word.split(//).sort.uniq
 
-#binding.pry
+# binding.pry
 
-#comapre each index in anagram array and see if any match word array
-#comparing whole word_array to each index in anagram array
+# result << arr.join.split(//).sort.uniq
 
-#iterate each index of anagram and sort each index
-#anagram[0].split("").sort
-#=> ["e", "h", "l", "l", "o"]
-#compare sorted anagram to word_array 
-#=> ["a", "d", "e", "i", "p", "r"]
-#check to see if they are equal
-if word_array == arr
+# #split words array
+# if words == result
+#   #return all matches in an array
+#   return 
+#     result
 
-#return all matches if true
+# # else 
+# # # #return an empty array if false 
+# # result == []
+# end
+# end
 
-else 
-#return an empty array if false 
-arr_list
 
-end 
-end
-
-#https://stackoverflow.com/questions/39869703/ruby-anagram-codes
 
 end
